@@ -20,7 +20,7 @@ RUN set -eux; \
 
 ENV DIR /usr/src/official-images
 ENV BASHBREW_LIBRARY $DIR/library
-
+ENTRYPOINT ["/etc/init.d/site24x7monagent", "start"]
 # crane for diff-pr.sh
 # https://gcr.io/go-containerregistry/crane:latest
 # https://explore.ggcr.dev/?image=gcr.io/go-containerregistry/crane:latest
